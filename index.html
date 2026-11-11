@@ -3,55 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tu Portafolio</title>
+  <title>Tu Nombre | Portafolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <header class="hero">
-      <!-- Cambia src por tu foto, por ejemplo: src="foto.jpg" -->
-      <img alt="Foto de perfil" src="./profile.jpeg" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23dcefe5'/%3E%3Ccircle cx='100' cy='80' r='36' fill='%232f5bea'/%3E%3Cpath d='M30 200c0-44 31-70 70-70s70 26 70 70z' fill='%232f5bea'/%3E%3C/svg%3E">
+  <nav class="nav">
+    <div class="contenedor">
+      <a class="logo" href="#inicio">Oscar Stanley<span> Marquez Portillo</span></a>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="inicio">
+    <div class="contenedor">
       <div>
+        <span class="saludo">Hola, soy</span>
         <h1>Oscar Stanley Marquez Portillo</h1>
         <p class="rol">Desarrollador web en formación</p>
-        <p>Me gusta construir páginas claras y útiles. Actualmente aprendo HTML, CSS y JavaScript, y busco mi primer proyecto en equipo.</p>
+        <p class="intro">Me gusta construir páginas claras y útiles. Actualmente aprendo HTML, CSS y JavaScript, y busco mi primer proyecto en equipo.</p>
+        <div class="botones">
+          <a class="boton principal" href="#proyectos">Ver proyectos</a>
+          <a class="boton secundario" href="#contacto">Contáctame</a>
+        </div>
       </div>
-    </header>
+      <div class="foto">
+        <!-- Cambia src por tu foto, por ejemplo: src="foto.jpg" -->
+        <img alt="Foto de perfil" src="./profile.jpeg">
+      </div>
+    </div>
+  </header>
 
-    <section>
+  <section class="alterna" id="sobre-mi">
+    <div class="contenedor">
+      <h2>Sobre mí</h2>
+      <p class="subtitulo">Estudio programación y me interesa el diseño de interfaces sencillas. Aprendo mejor construyendo cosas reales.</p>
+      <div class="sobre">
+        <div class="dato"><strong>3</strong><span>proyectos terminados</span></div>
+        <div class="dato"><strong>1 año</strong><span>aprendiendo a programar</span></div>
+        <div class="dato"><strong>100%</strong><span>ganas de aprender</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="contenedor">
       <h2>Habilidades</h2>
+      <p class="subtitulo">Lo que he practicado hasta ahora.</p>
       <ul class="habilidades">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git y GitHub</li>
+        <li><div class="fila"><span>HTML</span><span>85%</span></div><div class="barra"><i style="width:85%"></i></div></li>
+        <li><div class="fila"><span>CSS</span><span>75%</span></div><div class="barra"><i style="width:75%"></i></div></li>
+        <li><div class="fila"><span>JavaScript</span><span>60%</span></div><div class="barra"><i style="width:60%"></i></div></li>
+        <li><div class="fila"><span>Git y GitHub</span><span>50%</span></div><div class="barra"><i style="width:50%"></i></div></li>
+      </ul>
+      <ul class="etiquetas">
         <li>Diseño responsivo</li>
         <li>Trabajo en equipo</li>
+        <li>Resolución de problemas</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section class="alterna" id="proyectos">
+    <div class="contenedor">
       <h2>Proyectos</h2>
-      <article class="proyecto">
-        <h3>Lista de tareas</h3>
-       
-        <p>Aplicación para agregar, completar y borrar tareas, hecha con JavaScript.</p>
-      </article>
-      <article class="proyecto">
-        <h3>Página de una cafetería</h3>
-       
-        <p>Sitio de una sola página con menú, horarios y mapa, adaptado a celulares.</p>
-      </article>
-      <article class="proyecto">
-        <h3>Calculadora de propinas</h3>
-       
-        <p>Calcula el total por persona al dividir una cuenta.</p>
-      </article>
-    </section>
+      <p class="subtitulo">Algunos trabajos que he hecho.</p>
+      <div class="proyectos">
+        <article class="proyecto">
+          <div class="miniatura m1">✓</div>
+          <div class="cuerpo">
+            <h3>Lista de tareas</h3>
+            <p>Aplicación para agregar, completar y borrar tareas.</p>
+            <ul class="tecnologias"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            
+          </div>
+        </article>
+        <article class="proyecto">
+          <div class="miniatura m2">☕</div>
+          <div class="cuerpo">
+            <h3>Página de una cafetería</h3>
+            <p>Sitio de una sola página con menú, horarios y mapa.</p>
+            <ul class="tecnologias"><li>HTML</li><li>CSS</li></ul>
+            
+          </div>
+        </article>
+        <article class="proyecto">
+          <div class="miniatura m3">%</div>
+          <div class="cuerpo">
+            <h3>Calculadora de propinas</h3>
+            <p>Calcula el total por persona al dividir una cuenta.</p>
+            <ul class="tecnologias"><li>HTML</li><li>JavaScript</li></ul>
+            
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <p>Contacto: <a href="mailto:tucorreo@ejemplo.com">stanleymarquez26@gmail.com</a></p>
-    </footer>
-  </main>
+  <section id="contacto">
+    <div class="contenedor">
+      <div class="contacto">
+        <h2>Hablemos</h2>
+        <p>¿Tienes una idea o una oportunidad? Escríbeme y te respondo pronto.</p>
+        <a class="boton principal" href="mailto:stanleymarquez26@gmail.com">Enviar correo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 stan-mqz. Hecho con HTML y CSS.</p>
+  </footer>
 </body>
 </html>
