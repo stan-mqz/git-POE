@@ -1,0 +1,56 @@
+:root {
+  --fondo: #f6f8fb;
+  --tinta: #1b2a41;
+  --suave: #5b6b82;
+  --acento: #2f5bea;
+  --menta: #dcefe5;
+  --linea: #d5dce6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--fondo);
+  color: var(--tinta);
+  line-height: 1.6;
+}
+main { max-width: 860px; margin: 0 auto; padding: 56px 24px 72px; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.1; }
+h2 { font-size: 1.5rem; margin-bottom: 18px; }
+section { margin-top: 56px; }
+
+/* Presentación */
+.hero { display: flex; gap: 36px; align-items: center; flex-wrap: wrap; }
+.hero img {
+  width: 200px; height: 200px; object-fit: cover;
+  border-radius: 50%; background: var(--menta);
+  border: 4px solid var(--acento);
+}
+.hero p { color: var(--suave); max-width: 46ch; margin-top: 12px; }
+.rol { color: var(--acento); font-weight: 600; margin-top: 8px; }
+
+/* Habilidades */
+.habilidades { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+.habilidades li {
+  background: var(--menta); padding: 6px 16px;
+  border-radius: 999px; font-weight: 500;
+}
+
+/* Proyectos */
+.proyecto {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 24px;
+  padding: 20px 0; border-top: 1px solid var(--linea);
+}
+.proyecto:last-child { border-bottom: 1px solid var(--linea); }
+.proyecto h3 { font-size: 1.1rem; }
+.proyecto p { color: var(--suave); grid-column: 1; }
+.proyecto a { grid-row: 1; grid-column: 2; color: var(--acento); font-weight: 600; }
+a:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+
+footer { margin-top: 56px; color: var(--suave); }
+footer a { color: var(--acento); }
+
+@media (max-width: 520px) {
+  .proyecto { grid-template-columns: 1fr; }
+  .proyecto a { grid-row: auto; grid-column: 1; }
+}
